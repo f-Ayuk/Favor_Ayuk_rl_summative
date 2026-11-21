@@ -1,0 +1,45 @@
+[project]
+name = "Favor_Ayuk_rl-summative"
+version = "1.0.0"
+description = "Reinforcement Learning Comparison for a Smart Irrigation Agricultural System"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+
+dependencies = [
+    # Numerical computing
+    "numpy>=1.26.4,<2.0",
+
+    # Reinforcement learning environment
+    "gymnasium>=1.0,<2.0",
+
+    # Deep learning
+    "torch>=2.5,<2.6",
+
+    # TorchRL integration
+    "torchrl>=0.6,<0.7",
+    "tensordict>=0.6,<0.6.2",
+
+    # Environment visualization
+    "pygame>=2.5,<3.0",
+
+    # Data analysis and visualization
+    "matplotlib>=3.8,<4.0",
+    "pandas>=2.2,<3.0",
+
+    # Training utilities
+    "tqdm>=4.66,<5.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0,<9.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v"
